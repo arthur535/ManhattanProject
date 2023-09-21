@@ -1,0 +1,34 @@
+This is an implementation of forward linked list data structure with iterators.
+
+Here you'll see member functions of Vector
+    clear()
+    swap()
+    front()
+    empty()
+    size()
+    insert()
+    erase()
+    push_front()
+    pop_front()
+    sort() // Insertion Sort
+    reverse()
+    print()
+
+Iteartor functions and operators
+    begin()
+    end()
+    operator ++
+    operator *
+    operator ->
+    
+And also operators that can be used with Vector
+    operator = 
+    operator == 
+    operator != 
+    operator < 
+    operator > 
+    operator <= 
+    operator >= 
+
+And what you need to use this data structure? 
+- Just include "forward_list.h" file 
