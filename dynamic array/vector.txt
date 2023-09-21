@@ -1,0 +1,26 @@
+This is an implementation of vector (dynamic array) data structure.
+
+Here you'll see member functions of Vector
+    /* O(1) */ push_back()
+    /* O(1) */ pop_back()
+    /* O(n) */ push_front()
+    /* O(n) */ erase()
+    /* O(1) */ size()
+    /* O(1) */ capacity()
+    /* O(1) */ front()
+    /* O(1) */ back()
+    /* O(n) */ insert()
+    /* O(1) */ isEmpty()
+    /* O(1) */ clear()
+    /* O(n) */ find()
+    /* O(n) */ at()
+    /* O(n) */ reserve()
+    /* O(n) */ print()
+    /* O(1) */ my_swap()
+
+And also operators that can be used with Vector
+
+    opertor []
+    operator = 
+    operator +=
+    operator <<
