@@ -24,3 +24,6 @@ And also operators that can be used with Vector
     operator = 
     operator +=
     operator <<
+
+And what you need to use this data structure? 
+- Just include "vector.h" file 
