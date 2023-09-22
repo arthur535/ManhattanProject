@@ -1,1 +1,13 @@
+This is an implementation of adaptive container stack using linked list.
 
+Here you'll see member functions of Stack
+    push()
+    pop()
+    top()
+    empty()
+    size()
+
+    operator <<
+
+And what you need to use this data structure? 
+- Just include "stack.h" file 
