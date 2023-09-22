@@ -1,1 +1,14 @@
+This is an implementation of adaptive container priority_queue using Vector (also self implemented).
+Implementation is done using max heap data structure.
 
+Here you'll see member functions of priority_queue
+    insert()
+    deletion()
+    increase_key()
+    excractMax()
+    data()
+    get_max()
+    size()
+
+And what you need to use this data structure? 
+- Just include file in directory - "priority_queue.h" 
