@@ -1,6 +1,6 @@
 This is an implementation of forward linked list data structure with iterators.
 
-Here you'll see member functions of Vector
+Here you'll see member functions of Forward List
     clear()
     swap()
     front()
@@ -21,7 +21,7 @@ Iteartor functions and operators
     operator *
     operator ->
     
-And also operators that can be used with Vector
+And also operators that can be used with Forward List
     operator = 
     operator == 
     operator != 
