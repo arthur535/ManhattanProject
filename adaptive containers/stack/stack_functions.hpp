@@ -11,6 +11,7 @@ Stack<T>::Stack(const Stack& other){
     m_size = other.m_size;
     if (other.head == nullptr) {
         head = nullptr;
+        tail = nullptr;
         return;
     }
     
