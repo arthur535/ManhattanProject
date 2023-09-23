@@ -29,6 +29,50 @@ List<T>::List(const List& other) {
 }
 
 template<typename T>
+List<T>::List(List&& rhs) {
+    head = rhs.head;
+    tail = rhs.tail;
+    rhs.head = nullptr;
+    rhs.tail = nullptr;
+}
+
+template<typename T>
+List<T>& List<T>::operator=(const List& other) {
+    if(this == &other)
+        return *this;
+    
+    if (other.head == nullptr) {
+        head = nullptr;
+        tail = nullptr;
+        return *this;
+    }
+        
+    head = new Node(other.head->val);
+    Node* current = head;
+    Node* otherCurrent = other.head->next;
+    
+    while (otherCurrent) {
+        current->next = new Node(otherCurrent->val);
+        current->next->prev = current;
+        current = current->next;
+        otherCurrent = otherCurrent->next;
+    }
+    tail = current;
+    tail->next = nullptr;
+    head->prev = nullptr;
+    
+    return *this;
+}
+
+template<typename T>
+List<T>& List<T>::operator=(const List& other) {
+    head = rhs.head;
+    tail = rhs.tail;
+    rhs.head = nullptr;
+    rhs.tail = nullptr;
+    return *this
+}
+template<typename T>
 List<T>::List(std::initializer_list<T> init)  : head(nullptr), tail(nullptr) {
     for (const T& elem : init) {
         push_back(elem);
