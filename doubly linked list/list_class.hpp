@@ -19,6 +19,9 @@ public:
     List(List&&);
     List(std::initializer_list<T>);
     ~List();
+
+    List& operator=(const List&);
+    List& operator=(List&&);
     
     void push_back(const T&) noexcept;
     void push_back(T&&) noexcept;
