@@ -1,18 +1,18 @@
 in this dictionary you can find implementation of linked list ds.
+To use this ds you need you include "list.h" file 
 
 Member function available :
-  push_back()
-  push_front()
-  pop_back()
-  popf_ront()
-  insert()
-  erase()
-  empty()
-  size()
-  front()
-  back()
-  data()
-  resize()
-  clear()
-
-  ! not providing move constructor and
+    push_back()
+    push_front()
+    pop_back()
+    popf_ront()
+    insert()
+    erase()
+    empty()
+    size()
+    front()
+    back()
+    data()
+    resize()
+    clear()
+.
