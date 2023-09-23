@@ -1,1 +1,18 @@
+in this dictionary you can find implementation of linked list ds.
 
+Member function available :
+  push_back()
+  push_front()
+  pop_back()
+  popf_ront()
+  insert()
+  erase()
+  empty()
+  size()
+  front()
+  back()
+  data()
+  resize()
+  clear()
+
+  ! not providing move constructor and
