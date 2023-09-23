@@ -9,6 +9,7 @@ template<typename T>
 List<T>::List(const List& other) {
     if (other.head == nullptr) {
         head = nullptr;
+        tail = nullptr;
         return;
     }
         
