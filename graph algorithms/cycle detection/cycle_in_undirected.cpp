@@ -1,4 +1,5 @@
 //function finds if there is a cycle in undirected graph or not
+enum State { UNVISITED, INSTACK, VISITED };
 bool has_cycle_undirected(const vector<Node*>& vertices) {
     unordered_map<Node*, State> visited;
     stack<Node*> s;
