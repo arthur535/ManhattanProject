@@ -1,4 +1,4 @@
-
+//function finds if there is a cycle in directed graph or not
 bool has_cycle_directed(const vector<Node*>& vertices) {
     unordered_map<Node*, bool> visited;
     unordered_set<Node*> inStack;
