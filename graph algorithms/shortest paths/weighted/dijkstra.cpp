@@ -7,6 +7,7 @@ vector<vector<Node*>> dijkstra (const vector<Node*>& vertices, Node* source, Nod
     vector<vector<Node*>> result;
     unordered_map<Node*, std::optional<int>> distances;
     unordered_map<Node*, Node*> parent;
+    unordered_map<Node*, bool> visited;
     parent[source] = nullptr;
     for(Node* v : vertices){
         distances[v] = std::nullopt;
@@ -19,8 +20,9 @@ vector<vector<Node*>> dijkstra (const vector<Node*>& vertices, Node* source, Nod
     while(!pq.empty()) {
         auto [u, dist] = pq.top();
         pq.pop();
+        visited[u] = true;
         for (auto [adj, w]  : u->adjacents) {
-            if (!distances[adj] || distances[u].value() + w < distances[adj].value()) {
+            if (!visited[adj] && (!distances[adj] || distances[u].value() + w < distances[adj].value())) {
                 distances[adj] = distances[u].value() + w;
                 pq.push(make_pair(adj, distances[adj].value()));
                 parent[adj] = u;
@@ -35,7 +37,7 @@ vector<vector<Node*>> dijkstra (const vector<Node*>& vertices, Node* source, Nod
                     path.clear();
                 }
             }
-            else if (!distances[adj] || distances[u].value() + w == distances[adj].value()) {
+            else if (!visited[adj] && (!distances[adj] || distances[u].value() + w == distances[adj].value())) {
                 parent[adj] = u;
                 if( adj == destination ) {
                     Node* curr = adj;
@@ -52,3 +54,4 @@ vector<vector<Node*>> dijkstra (const vector<Node*>& vertices, Node* source, Nod
     }
     return result;
 }
+
